@@ -50,7 +50,7 @@ function validatePlacement(input: any) {
     }
 }
 
-export default async function start() {
+async function start() {
     logger.log(
         {
             level: "BEGIN",
@@ -66,7 +66,7 @@ async function mainMenu() {
         .then(processInput)
 }
 
-export async function processInput(answer: any) {
+async function processInput(answer: any) {
     if (answer.command === "PLACE") {
         await placeX();
     }
@@ -164,3 +164,5 @@ async function right() {
     }
     mainMenu();
 }
+
+module.exports = start;
